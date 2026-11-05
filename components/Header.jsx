@@ -22,7 +22,7 @@ export const SERVICES = [
 
 const PHONE = "+1 786 619 8997";
 const PHONE_HREF = "tel:+17866198997";
-const EMAIL = "info@reliantware.com";
+const EMAIL = "info@getpatients24.com";
 
 function Chevron() {
   return (
