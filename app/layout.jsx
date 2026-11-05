@@ -5,11 +5,11 @@ import Footer from "@/components/Footer";
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://reliantware.com"),
   title: {
-    default: "GetPatients24 | Patient Growth for Medical Clinics",
+    default: "Get More Patients for Your Clinic | GetPatients24",
     template: "%s",
   },
   description:
-    "GetPatients24 brings medical and wellness clinics more of the right patients with done-for-you marketing, fast follow-up and AI booking.",
+    "Get more of the right patients for your clinic. GetPatients24 runs done-for-you marketing, fast lead follow-up and AI booking for dental, med spa & more.",
   openGraph: {
     siteName: "GetPatients24",
     type: "website",

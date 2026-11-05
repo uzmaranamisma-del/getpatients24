@@ -2,8 +2,8 @@ import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
-  title: "GetPatients24 | Patient Growth for Medical Clinics",
-  description: "GetPatients24 brings medical and wellness clinics more of the right patients with done-for-you marketing, fast follow-up and AI booking.",
+  title: "Get More Patients for Your Clinic | GetPatients24",
+  description: "Get more of the right patients for your clinic. GetPatients24 runs done-for-you marketing, fast lead follow-up and AI booking for dental, med spa & more.",
 };
 
 export default function MainPage() {
