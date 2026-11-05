@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://reliantware.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://getpatients24.com"),
   title: {
     default: "Get More Patients for Your Clinic | GetPatients24",
     template: "%s",

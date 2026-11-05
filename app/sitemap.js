@@ -1,4 +1,4 @@
-const BASE = process.env.NEXT_PUBLIC_SITE_URL || "https://reliantware.com";
+const BASE = process.env.NEXT_PUBLIC_SITE_URL || "https://getpatients24.com";
 
 const ROUTES = [
   "", "/how-we-help", "/done-for-you-patient-acquisition", "/website-ai-booking-system", "/pricing-plans",
