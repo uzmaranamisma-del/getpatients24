@@ -1,5 +1,4 @@
-
-
+import { CONTACT_EMAIL } from "@/lib/site";
 export const metadata = {
   title: "Terms & Conditions | GetPatients24",
   description: "The terms that apply to using the GetPatients24 website and services.",
@@ -27,7 +26,7 @@ export default function TermsPage() {
       <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}><h2 style={{ margin: "0", fontSize: "22px", fontWeight: "700", color: "var(--ink)" }}>7. Intellectual property</h2><p style={{ margin: "0" }}>[Ownership of websites, ad creative, content and accounts.]</p></div>
       <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}><h2 style={{ margin: "0", fontSize: "22px", fontWeight: "700", color: "var(--ink)" }}>8. Limitation of liability</h2><p style={{ margin: "0" }}>[Liability limits.]</p></div>
       <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}><h2 style={{ margin: "0", fontSize: "22px", fontWeight: "700", color: "var(--ink)" }}>9. Governing law</h2><p style={{ margin: "0" }}>[Jurisdiction.]</p></div>
-      <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}><h2 style={{ margin: "0", fontSize: "22px", fontWeight: "700", color: "var(--ink)" }}>10. Contact</h2><p style={{ margin: "0" }}>[info@getpatients24.com] · [Business address]</p></div>
+      <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}><h2 style={{ margin: "0", fontSize: "22px", fontWeight: "700", color: "var(--ink)" }}>10. Contact</h2><p style={{ margin: "0" }}>{CONTACT_EMAIL} · [Business address]</p></div>
       </div>
       </section>
     </>

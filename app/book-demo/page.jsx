@@ -1,3 +1,4 @@
+import { CONTACT_EMAIL } from "@/lib/site";
 import BookingForm from "@/components/BookingForm";
 
 export const metadata = {
@@ -29,7 +30,7 @@ export default function BookDemoPage() {
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: "12px", fontSize: "16px", fontWeight: "600" }}>
       <span style={{ display: "flex", gap: "12px", alignItems: "center" }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ stroke: "var(--pri)" }}><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>Prefer to talk now?{" "}<a href="tel:+17866198997" style={{ color: "var(--pri)" }}>+1 786 619 8997</a></span>
-      <span style={{ display: "flex", gap: "12px", alignItems: "center" }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ stroke: "var(--pri)" }}><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg><a href="mailto:info@getpatients24.com" style={{ color: "var(--pri)" }}>info@getpatients24.com</a></span>
+      <span style={{ display: "flex", gap: "12px", alignItems: "center" }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ stroke: "var(--pri)" }}><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg><a href={`mailto:${CONTACT_EMAIL}`} style={{ color: "var(--pri)" }}>{CONTACT_EMAIL}</a></span>
       </div>
       </div>
       <div id="book" style={{ flex: "1 1 460px", minWidth: "0", scrollMarginTop: "120px", background: "var(--ground)", border: "1px solid var(--line)", borderRadius: "32px", padding: "36px", display: "flex", flexDirection: "column", gap: "16px", boxShadow: "0 30px 60px rgba(11,31,58,0.08)" }}>

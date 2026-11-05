@@ -1,5 +1,4 @@
-
-
+import { CONTACT_EMAIL } from "@/lib/site";
 export const metadata = {
   title: "Privacy Policy | GetPatients24",
   description: "How GetPatients24 collects, uses and protects your information.",
@@ -27,7 +26,7 @@ export default function PrivacyPage() {
       <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}><h2 style={{ margin: "0", fontSize: "22px", fontWeight: "700", color: "var(--ink)" }}>7. Cookies{" "}&amp;{" "}tracking</h2><p style={{ margin: "0" }}>[Pixels, analytics and how to opt out.]</p></div>
       <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}><h2 style={{ margin: "0", fontSize: "22px", fontWeight: "700", color: "var(--ink)" }}>8. Data retention{" "}&amp;{" "}security</h2><p style={{ margin: "0" }}>[How long data is kept and how it is protected.]</p></div>
       <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}><h2 style={{ margin: "0", fontSize: "22px", fontWeight: "700", color: "var(--ink)" }}>9. Your rights</h2><p style={{ margin: "0" }}>[Access, correction, deletion and SMS/email opt-out.]</p></div>
-      <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}><h2 style={{ margin: "0", fontSize: "22px", fontWeight: "700", color: "var(--ink)" }}>10. Contact</h2><p style={{ margin: "0" }}>[info@getpatients24.com] · [Business address]</p></div>
+      <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}><h2 style={{ margin: "0", fontSize: "22px", fontWeight: "700", color: "var(--ink)" }}>10. Contact</h2><p style={{ margin: "0" }}>{CONTACT_EMAIL} · [Business address]</p></div>
       </div>
       </section>
     </>

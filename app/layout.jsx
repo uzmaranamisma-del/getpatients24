@@ -1,9 +1,10 @@
 import "./globals.css";
+import { SITE_URL } from "@/lib/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://getpatients24.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Get More Patients for Your Clinic | GetPatients24",
     template: "%s",

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Logo from "@/components/Logo";
+import { CONTACT_EMAIL } from "@/lib/site";
 
 export const SPECIALTIES = [
   { href: "/chiropractic", label: "Chiropractic" },
@@ -22,7 +23,7 @@ export const SERVICES = [
 
 const PHONE = "+1 786 619 8997";
 const PHONE_HREF = "tel:+17866198997";
-const EMAIL = "info@getpatients24.com";
+const EMAIL = CONTACT_EMAIL;
 
 function Chevron() {
   return (
