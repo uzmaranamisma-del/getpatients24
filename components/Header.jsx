@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Logo from "@/components/Logo";
-import { CONTACT_EMAIL } from "@/lib/site";
+import { CONTACT_EMAIL as EMAIL } from "@/lib/site";
 
 export const SPECIALTIES = [
   { href: "/chiropractic", label: "Chiropractic" },
@@ -23,7 +23,6 @@ export const SERVICES = [
 
 const PHONE = "+1 786 619 8997";
 const PHONE_HREF = "tel:+17866198997";
-const EMAIL = CONTACT_EMAIL;
 
 function Chevron() {
   return (
@@ -63,31 +62,6 @@ export default function Header() {
 
   return (
     <>
-      <div className="topbar">
-        <div className="topbar-inner">
-          <span style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10 }}>
-            <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: "0.08em", padding: "4px 10px", borderRadius: 999, background: "var(--hi)", color: "var(--ink)" }}>FREE</span>
-            Get a free patient flow review for your clinic
-            <Link href="/book-demo" style={{ fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 3 }}>
-              Claim yours
-            </Link>
-          </span>
-          <span className="contact" style={{ display: "flex", flexWrap: "wrap", gap: "8px 22px" }}>
-            <a href={PHONE_HREF} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <PhoneIcon size={15} color="var(--hi)" />
-              {PHONE}
-            </a>
-            <a href={`mailto:${EMAIL}`} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--hi)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <rect x="2" y="4" width="20" height="16" rx="2" />
-                <path d="m22 7-10 6L2 7" />
-              </svg>
-              {EMAIL}
-            </a>
-          </span>
-        </div>
-      </div>
-
       <header className="site-header">
         <div className="header-inner">
           <Link href="/" className="brand" aria-label="GetPatients24 home">

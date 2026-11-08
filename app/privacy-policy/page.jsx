@@ -1,4 +1,5 @@
-import { CONTACT_EMAIL } from "@/lib/site";
+
+
 export const metadata = {
   title: "Privacy Policy | GetPatients24",
   description: "How GetPatients24 collects, uses and protects your information.",
@@ -7,7 +8,8 @@ export const metadata = {
 export default function PrivacyPage() {
   return (
     <>
-      <section style={{ background: "#FFFFFF", padding: "80px 0 56px", borderBottom: "1px solid var(--line)" }}>
+      <section style={{ background: "#FFFFFF", padding: "80px 0 56px", borderBottom: "1px solid var(--line)", position: "relative", overflow: "hidden", isolation: "isolate" }}>
+      <div aria-hidden="true" style={{ position: "absolute", inset: "0", zIndex: "-1", backgroundImage: "url(/hero-team-review.webp)", backgroundSize: "cover", backgroundPosition: "center center" }}></div><div aria-hidden="true" style={{ position: "absolute", inset: "0", zIndex: "-1", background: "radial-gradient(ellipse 62% 78% at 50% 50%, rgba(242,251,253,0.93) 0%, rgba(236,249,252,0.8) 55%, rgba(202,240,248,0.5) 100%)" }}></div><div aria-hidden="true" style={{ position: "absolute", inset: "0", zIndex: "-1", background: "linear-gradient(180deg, rgba(255,255,255,0) 60%, #FFFFFF 100%)" }}></div>
       <div style={{ maxWidth: "860px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", gap: "16px" }}>
       <span style={{ fontSize: "14px", fontWeight: "700", letterSpacing: "0.1em", color: "var(--priD)" }}>LEGAL</span>
       <h1 style={{ margin: "0", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: "800", fontSize: "clamp(40px, 5vw, 64px)", lineHeight: "1.05", letterSpacing: "-0.04em" }}>Privacy Policy</h1>
@@ -26,7 +28,7 @@ export default function PrivacyPage() {
       <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}><h2 style={{ margin: "0", fontSize: "22px", fontWeight: "700", color: "var(--ink)" }}>7. Cookies{" "}&amp;{" "}tracking</h2><p style={{ margin: "0" }}>[Pixels, analytics and how to opt out.]</p></div>
       <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}><h2 style={{ margin: "0", fontSize: "22px", fontWeight: "700", color: "var(--ink)" }}>8. Data retention{" "}&amp;{" "}security</h2><p style={{ margin: "0" }}>[How long data is kept and how it is protected.]</p></div>
       <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}><h2 style={{ margin: "0", fontSize: "22px", fontWeight: "700", color: "var(--ink)" }}>9. Your rights</h2><p style={{ margin: "0" }}>[Access, correction, deletion and SMS/email opt-out.]</p></div>
-      <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}><h2 style={{ margin: "0", fontSize: "22px", fontWeight: "700", color: "var(--ink)" }}>10. Contact</h2><p style={{ margin: "0" }}>{CONTACT_EMAIL} · [Business address]</p></div>
+      <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}><h2 style={{ margin: "0", fontSize: "22px", fontWeight: "700", color: "var(--ink)" }}>10. Contact</h2><p style={{ margin: "0" }}>[info@getpatients24.com] · [Business address]</p></div>
       </div>
       </section>
     </>

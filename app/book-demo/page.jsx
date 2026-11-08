@@ -1,4 +1,3 @@
-import { CONTACT_EMAIL } from "@/lib/site";
 import BookingForm from "@/components/BookingForm";
 
 export const metadata = {
@@ -9,7 +8,8 @@ export const metadata = {
 export default function BookDemoPage() {
   return (
     <>
-      <section style={{ background: "linear-gradient(180deg, var(--soft) 0%, #FFFFFF 100%)", padding: "96px 0 64px" }}>
+      <section style={{ background: "linear-gradient(180deg, var(--soft) 0%, #FFFFFF 100%)", padding: "96px 0 64px", position: "relative", overflow: "hidden", isolation: "isolate" }}>
+      <div aria-hidden="true" style={{ position: "absolute", inset: "0", zIndex: "-1", backgroundImage: "url(/hero-team-review.webp)", backgroundSize: "cover", backgroundPosition: "center center" }}></div><div aria-hidden="true" style={{ position: "absolute", inset: "0", zIndex: "-1", background: "radial-gradient(ellipse 62% 78% at 50% 50%, rgba(242,251,253,0.93) 0%, rgba(236,249,252,0.8) 55%, rgba(202,240,248,0.5) 100%)" }}></div><div aria-hidden="true" style={{ position: "absolute", inset: "0", zIndex: "-1", background: "linear-gradient(180deg, rgba(255,255,255,0) 60%, #FFFFFF 100%)" }}></div>
       <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "22px" }}>
       <span style={{ fontSize: "14px", fontWeight: "700", letterSpacing: "0.1em", color: "var(--priD)" }}>BOOK A DEMO</span>
       <h1 style={{ margin: "0", maxWidth: "940px", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: "800", fontSize: "clamp(44px, 5.6vw, 78px)", lineHeight: "1.0", letterSpacing: "-0.04em" }}>Book your{" "}<span style={{ color: "var(--pri)" }}>patient growth</span>{" "}strategy call</h1>
@@ -24,13 +24,14 @@ export default function BookDemoPage() {
       <span style={{ fontSize: "14px", fontWeight: "700", letterSpacing: "0.1em", color: "var(--priD)" }}>CHOOSE A TIME THAT WORKS FOR YOU</span>
       <h2 style={{ margin: "0", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: "800", fontSize: "clamp(34px, 4vw, 52px)", lineHeight: "1.05", letterSpacing: "-0.035em" }}>A few quick questions, then pick your slot.</h2>
       <p style={{ margin: "0", fontSize: "18px", lineHeight: "1.7", color: "var(--muted)" }}>Your answers help us prepare, so we can spend the call on your clinic instead of the basics. Whatever you decide afterwards, you'll leave with a clear picture of what to do next.</p>
-      <div style={{ borderRadius: "28px", background: "var(--ink)", color: "#FFFFFF", padding: "30px", display: "flex", flexDirection: "column", gap: "16px" }}>
+      <div style={{ position: "relative", height: "260px", borderRadius: "28px", overflow: "hidden", border: "1px solid var(--line)" }}><img src="/pt-with-patient.webp" alt="Clinician standing with a patient in a wheelchair in a therapy room" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 35%", display: "block" }} /></div>
+      <div style={{ borderRadius: "28px", background: "var(--night)", color: "#FFFFFF", padding: "30px", display: "flex", flexDirection: "column", gap: "16px" }}>
       <span style={{ display: "flex", alignItems: "center", gap: "14px" }}><span style={{ width: "48px", height: "48px", borderRadius: "14px", background: "var(--hi)", display: "flex", alignItems: "center", justifyContent: "center" }}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ stroke: "var(--ink)" }}><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"></path></svg></span><span style={{ fontSize: "20px", fontWeight: "700" }}>You'll leave with clarity</span></span>
       <span style={{ fontSize: "16px", lineHeight: "1.65", color: "#C4D2E0" }}>Whether we work together or not, you'll know where your bookings are slipping and the next three things to fix.</span>
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: "12px", fontSize: "16px", fontWeight: "600" }}>
       <span style={{ display: "flex", gap: "12px", alignItems: "center" }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ stroke: "var(--pri)" }}><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>Prefer to talk now?{" "}<a href="tel:+17866198997" style={{ color: "var(--pri)" }}>+1 786 619 8997</a></span>
-      <span style={{ display: "flex", gap: "12px", alignItems: "center" }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ stroke: "var(--pri)" }}><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg><a href={`mailto:${CONTACT_EMAIL}`} style={{ color: "var(--pri)" }}>{CONTACT_EMAIL}</a></span>
+      <span style={{ display: "flex", gap: "12px", alignItems: "center" }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ stroke: "var(--pri)" }}><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg><a href="mailto:info@getpatients24.com" style={{ color: "var(--pri)" }}>info@getpatients24.com</a></span>
       </div>
       </div>
       <div id="book" style={{ flex: "1 1 460px", minWidth: "0", scrollMarginTop: "120px", background: "var(--ground)", border: "1px solid var(--line)", borderRadius: "32px", padding: "36px", display: "flex", flexDirection: "column", gap: "16px", boxShadow: "0 30px 60px rgba(11,31,58,0.08)" }}>
@@ -55,7 +56,7 @@ export default function BookDemoPage() {
       </section>
 
       <section style={{ padding: "0 24px 112px", background: "var(--ground)" }}>
-      <div style={{ maxWidth: "1240px", margin: "0 auto", borderRadius: "40px", background: "var(--ink)", padding: "clamp(36px, 5vw, 64px)", display: "flex", flexDirection: "column", gap: "32px" }}>
+      <div style={{ maxWidth: "1240px", margin: "0 auto", borderRadius: "40px", background: "var(--night)", padding: "clamp(36px, 5vw, 64px)", display: "flex", flexDirection: "column", gap: "32px" }}>
       <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: "20px" }}>
       <h2 style={{ margin: "0", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: "800", fontSize: "clamp(32px, 3.8vw, 48px)", letterSpacing: "-0.035em", color: "#FFFFFF" }}>A quick note before you book</h2>
       <a href="#book" style={{ display: "inline-flex", alignItems: "center", minHeight: "54px", padding: "0 26px", borderRadius: "999px", background: "var(--hi)", color: "var(--ink)", fontWeight: "800", textDecoration: "none" }}>Pick my time</a>

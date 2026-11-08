@@ -1,4 +1,6 @@
-import { SITE_URL as BASE } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
+
+const BASE = SITE_URL;
 
 export default function robots() {
   return {

@@ -1,4 +1,6 @@
-import { SITE_URL as BASE } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
+
+const BASE = SITE_URL;
 
 const ROUTES = [
   "", "/how-we-help", "/done-for-you-patient-acquisition", "/website-ai-booking-system", "/pricing-plans",

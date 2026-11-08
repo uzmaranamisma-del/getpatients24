@@ -18,7 +18,9 @@ Copy `.env.example` to `.env.local` (or set the same variables in Vercel):
 | Variable | What it does |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Your live domain, used for SEO, sitemap and robots |
-| `LEAD_WEBHOOK_URL` | Every form submission is POSTed here as JSON (n8n, Make, Zapier, GoHighLevel, CRM). Without it, leads only appear in the server log. |
+| `LEAD_TO_EMAIL` | Where every form submission is emailed (default getpatients24@gmail.com) |
+| `SMTP_USER` / `SMTP_PASS` | Gmail address and its App Password used to send those emails |
+| `LEAD_WEBHOOK_URL` | Optional: also forward each lead as JSON to n8n, Make, Zapier or a CRM |
 | `NEXT_PUBLIC_BOOKING_URL` | Optional cal.com / Calendly link shown under the demo slot picker |
 
 ## Where things live
@@ -30,7 +32,7 @@ Copy `.env.example` to `.env.local` (or set the same variables in Vercel):
 - `components/ContactForm.jsx`: homepage form.
 - `components/BookingForm.jsx` + `SlotPicker.jsx`: Book Demo questions and time picker.
 - `components/PricingPlans.jsx`: Organic / Paid switch and plan tables.
-- `app/api/lead/route.js`: receives all forms and forwards them to `LEAD_WEBHOOK_URL`.
+- `app/api/lead/route.js`: receives all forms, emails them to `LEAD_TO_EMAIL` and optionally forwards them to `LEAD_WEBHOOK_URL`.
 - `app/<page>/page.jsx`: one folder per page; page title and description are in `metadata` at the top.
 
 ## Pages
@@ -43,4 +45,4 @@ Copy `.env.example` to `.env.local` (or set the same variables in Vercel):
 
 - Replace example stats, results and testimonials with real, verifiable ones.
 - Fill in the `[bracketed]` placeholders on Privacy Policy, Terms and the Pricing FAQ, and have them reviewed.
-- Set `LEAD_WEBHOOK_URL` so leads reach your CRM.
+- Set `SMTP_PASS` (a Gmail App Password for getpatients24@gmail.com) so form submissions arrive in your inbox.

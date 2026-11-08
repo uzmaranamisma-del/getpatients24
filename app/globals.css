@@ -10,6 +10,7 @@
   --ground: #f2fbfd;
   --line: #cde7ef;
   --muted: #3f5a70;
+  --night: #06121f; /* near-black for dark sections */
 }
 
 *,
@@ -91,7 +92,7 @@ button:disabled {
 
 /* ---------- Header ---------- */
 .topbar {
-  background: var(--ink);
+  background: var(--night);
   color: #dcebf5;
   font-size: 14px;
 }
@@ -350,5 +351,246 @@ button:disabled {
   h1,
   h2 {
     overflow-wrap: anywhere;
+  }
+}
+
+/* ---------- Mobile layout fixes ----------
+  Page sections use inline styles from the design,
+  so these rules
+   adapt them on small screens without touching each page. */
+@media (max-width: 760px) {
+  /* Card grids: one column instead of cards wider than the screen */
+  main [style*="repeat(auto-fit"],
+  main [style*="repeat(auto-fill"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  /* Multi-column fixed grids of 4-5 go to 2 columns */
+  main [style*="repeat(4, minmax(0, 1fr))"],
+  main [style*="repeat(5, minmax(0, 1fr))"]:not([role="radiogroup"]) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  /* Side-by-side columns stack */
+  main [style*="flex: 1 1"]:not(:is(div:has(> [role="table"]) *)),
+  main [style*="flex:1 1"]:not(:is(div:has(> [role="table"]) *)),
+  main [style*="flex: 2 1"]:not(:is(div:has(> [role="table"]) *)),
+  main [style*="flex:2 1"]:not(:is(div:has(> [role="table"]) *)) {
+    flex-basis: 100% !important;
+    min-width: 0 !important;
+  }
+  main div:has(> [style*="flex: 1 1 0"]):not([role="radiogroup"]):not(:is(div:has(> [role="table"]) *)),
+  main div:has(> [style*="flex:1 1 0"]):not([role="radiogroup"]):not(:is(div:has(> [role="table"]) *)),
+  main div:has(> [style*="flex: 1.1"]):not(:is(div:has(> [role="table"]) *)),
+  main div:has(> [style*="flex:1.1"]):not(:is(div:has(> [role="table"]) *)),
+  main div:has(> [style*="flex: 1.15"]):not(:is(div:has(> [role="table"]) *)),
+  main div:has(> [style*="flex:1.15"]):not(:is(div:has(> [role="table"]) *)) {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  /* Divider handle between the Before / After calendars */
+  main [style*="width: 4px"][style*="flex: none"],
+  main [style*="width:4px"][style*="flex:none"],
+  main [style*=";width:4px;"][style*="flex:none"] {
+    width: auto !important;
+    height: 4px;
+    margin: 6px 0;
+  }
+  main [style*="width: 4px"][style*="flex: none"] > span,
+  main [style*="width:4px"][style*="flex:none"] > span,
+  main [style*=";width:4px;"][style*="flex:none"] > span {
+    transform: translate(-50%, -50%) rotate(90deg) !important;
+  }
+
+  /* Type scale */
+  main h1 {
+    font-size: clamp(34px, 10vw, 46px) !important;
+    line-height: 1.05 !important;
+  }
+  main h2 {
+    font-size: clamp(28px, 8.2vw, 38px) !important;
+    line-height: 1.1 !important;
+  }
+  main [style*="font-size: 76px"],
+  main [style*="font-size:76px"],
+  main [style*="font-size: 72px"],
+  main [style*="font-size:72px"],
+  main [style*="font-size: 68px"],
+  main [style*="font-size:68px"],
+  main [style*="font-size: 60px"],
+  main [style*="font-size:60px"],
+  main [style*="font-size: 56px"],
+  main [style*="font-size:56px"],
+  main [style*="font-size: 52px"],
+  main [style*="font-size:52px"],
+  main [style*="font-size: 48px"],
+  main [style*="font-size:48px"] {
+    font-size: 40px !important;
+  }
+  main [style*="font-size: 44px"],
+  main [style*="font-size:44px"],
+  main [style*="font-size: 40px"],
+  main [style*="font-size:40px"] {
+    font-size: 34px !important;
+  }
+  /* Giant decorative watermark words */
+  main [style*="font-size: 240px"],
+  main [style*="font-size:240px"],
+  main [style*="font-size: 200px"],
+  main [style*="font-size:200px"],
+  main [style*="font-size: 180px"],
+  main [style*="font-size:180px"],
+  main [style*="font-size: 160px"],
+  main [style*="font-size:160px"] {
+    font-size: 96px !important;
+  }
+
+  /* Breathing room */
+  main section[style*="padding: 120px 0"],
+  main section[style*="padding:120px 0"],
+  main section[style*="padding: 112px 0"],
+  main section[style*="padding:112px 0"],
+  main section[style*="padding: 104px 0"],
+  main section[style*="padding:104px 0"],
+  main section[style*="padding: 96px 0"],
+  main section[style*="padding:96px 0"],
+  main section[style*="padding: 88px 0"],
+  main section[style*="padding:88px 0"] {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+  main [style*="padding: 40px"],
+  main [style*="padding:40px"],
+  main [style*="padding: 44px"],
+  main [style*="padding:44px"],
+  main [style*="padding: 48px"],
+  main [style*="padding:48px"] {
+    padding: 24px !important;
+  }
+  main [style*="border-radius: 40px"],
+  main [style*="border-radius:40px"] {
+    border-radius: 28px !important;
+  }
+
+  /* Buttons: full width, easy to tap */
+  main a[style*="min-height: 60px"],
+  main a[style*="min-height:60px"],
+  main a[style*="min-height: 58px"],
+  main a[style*="min-height:58px"],
+  main a[style*="min-height: 56px"],
+  main a[style*="min-height:56px"] {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Pricing table: swipe sideways instead of squeezing three columns */
+  main div:has(> [role="table"]) {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+  }
+  main div:has(> [role="table"]) > * {
+    min-width: 640px;
+  }
+
+  /* Footer columns */
+  footer [style*="repeat(auto-fit"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Calendar events in the hero: titles only, smaller */
+  main [style*="border-radius:6px;padding:4px 6px"] {
+    padding: 2px 3px !important;
+  }
+  main [style*="border-radius:6px;padding:4px 6px"] > b {
+    font-size: 8.5px !important;
+    white-space: normal !important;
+  }
+  main [style*="border-radius:6px;padding:4px 6px"] > span {
+    display: none !important;
+  }
+  /* Button pairs wrap to full-width rows */
+  main div:has(> a[style*="min-height:60px"]),
+  main div:has(> a[style*="min-height:58px"]) {
+    flex-wrap: wrap !important;
+  }
+  main a[style*="min-height:60px"],
+  main a[style*="min-height:58px"] {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Organic / Paid switch stacks into a rounded card */
+  main [role="group"][style*="border-radius:999px"] {
+    border-radius: 28px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Home hero: floating 24/7 badge sits under the specialty card */
+  main #top [style*="left:-26px"] {
+    position: static !important;
+    margin-top: 14px;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Home hero specialty card: roomier tiles on phones */
+  main #top [style*="padding:28px"] {
+    padding: 18px !important;
+  }
+  main #top a[style*="border-radius:18px"] {
+    padding: 10px !important;
+    gap: 8px !important;
+    font-size: 12.5px !important;
+  }
+  main #top a[style*="border-radius:18px"] > span {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 9px !important;
+  }
+  main #top a[style*="border-radius:18px"] > span svg {
+    width: 16px;
+    height: 16px;
+  }
+  main #top a[style*="border-radius:18px"] > svg:last-child {
+    display: none;
+  }
+  main #top span[style*="text-align:right"] {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Home hero: 3-step line wraps into a rounded card */
+  main #top div[style*="border-radius:999px"][style*="box-shadow"] {
+    border-radius: 22px !important;
+    padding: 12px 14px !important;
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Dark problems grid: one card per row with a divider */
+  main #problems [style*="margin:0 -26px"] {
+    margin: 0 !important;
+    row-gap: 36px !important;
+  }
+  main #problems [style*="padding:0 26px 8px"] {
+    padding: 0 !important;
+    border-left: 0 !important;
+  }
+}
+@media (min-width: 761px) and (max-width: 1080px) {
+  main #problems [style*="repeat(4, minmax(0, 1fr))"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  main #problems [style*="repeat(4, minmax(0, 1fr))"] {
+    grid-template-columns: minmax(0, 1fr) !important;
   }
 }
