@@ -727,17 +727,6 @@ html body main div[role="group"][aria-label="Plan type"][role][aria-label] > but
   main #top div:has(> a[href="/chiropractic"]) > span[aria-hidden] { display: none !important; }
   main #top div:has(> a[href="/chiropractic"]) > a { padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,0.75); border: 1px solid var(--line); font-size: 13px; color: var(--ink) !important; }
 
-  /* "From first click" mini stepper: keep all four steps inside the card */
-  main div:has(> span[aria-hidden][style*="flex:0 0 14px"]),
-  main div:has(> span[aria-hidden][style*="flex: 0 0 14px"]) { padding: 16px 8px !important; gap: 2px !important; }
-  main div:has(> span[aria-hidden][style*="flex:0 0 14px"]) > span[aria-hidden],
-  main div:has(> span[aria-hidden][style*="flex: 0 0 14px"]) > span[aria-hidden] { flex: 0 0 8px !important; margin-top: 19px !important; }
-  main div:has(> span[aria-hidden][style*="flex:0 0 14px"]) > span:not([aria-hidden]) > span:first-child,
-  main div:has(> span[aria-hidden][style*="flex: 0 0 14px"]) > span:not([aria-hidden]) > span:first-child { width: 38px !important; height: 38px !important; }
-  main div:has(> span[aria-hidden][style*="flex:0 0 14px"]) > span:not([aria-hidden]) > span:last-child,
-  main div:has(> span[aria-hidden][style*="flex: 0 0 14px"]) > span:not([aria-hidden]) > span:last-child { font-size: 11px !important; white-space: nowrap; }
-  main div:has(> span[aria-hidden][style*="flex:0 0 14px"]) svg,
-  main div:has(> span[aria-hidden][style*="flex: 0 0 14px"]) svg { width: 17px; height: 17px; }
 }
 
 @media (max-width: 760px) {
@@ -926,4 +915,64 @@ html body main div[role="group"][aria-label="Plan type"][role][aria-label] > but
 }
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; }
+}
+
+@media (max-width: 760px) {
+  /* "From first click" stepper: four equal steps on one connecting line */
+  main .flow-steps.flow-steps.flow-steps {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    flex-direction: row !important;
+    position: relative;
+    gap: 0 !important;
+    padding: 16px 6px 14px !important;
+    border-radius: 18px !important;
+  }
+  main .flow-steps.flow-steps::before {
+    content: "";
+    position: absolute;
+    left: 12.5%;
+    right: 12.5%;
+    top: 34px;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--pri), var(--hi));
+    opacity: 0.45;
+  }
+  main .flow-steps.flow-steps > span[aria-hidden] { display: none !important; }
+  main .flow-steps.flow-steps > span:not([aria-hidden]) {
+    position: relative;
+    z-index: 1;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 7px !important;
+    width: auto !important;
+    min-width: 0 !important;
+    flex: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  main .flow-steps.flow-steps > span > span:first-child {
+    width: 38px !important;
+    height: 38px !important;
+    box-shadow: 0 0 0 4px var(--soft), 0 4px 10px rgba(2,62,138,0.12);
+  }
+  main .flow-steps.flow-steps > span > span:first-child svg { width: 17px; height: 17px; }
+  main .flow-steps.flow-steps > span > span:last-child {
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 360px) {
+  main .m-pad { padding: 20px 14px !important; }
+  main .flow-steps.flow-steps.flow-steps { padding: 14px 2px 12px !important; }
+  main .flow-steps.flow-steps > span > span:first-child { width: 34px !important; height: 34px !important; }
+  main .flow-steps.flow-steps::before { top: 31px; }
+  main .flow-steps.flow-steps > span > span:last-child { font-size: 9.5px !important; }
+}
+@media (max-width: 760px) {
+  main a[style*="border-radius:999px"], main a[style*="border-radius: 999px"] { white-space: nowrap; }
 }
