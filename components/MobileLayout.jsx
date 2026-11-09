@@ -33,7 +33,13 @@ function transform(main) {
     if (px(s.fontSize) >= 96 && e.children.length === 0) e.classList.add("m-hide");
     if (s.position === "sticky") e.classList.add("m-static");
   });
-  [...main.children].forEach((s, i) => s.classList.add(i === 0 ? "m-sec-first" : "m-sec"));
+  const secs = [...main.children];
+  secs.forEach((s, i) => {
+    s.classList.add(i === 0 ? "m-sec-first" : "m-sec");
+    // two sections in a row on the same background read as one: close the gap between them
+    const prev = secs[i - 1];
+    if (prev && i > 0 && cs(prev).backgroundColor === cs(s).backgroundColor && cs(s).backgroundImage === "none" && cs(prev).backgroundImage === "none") s.classList.add("m-sec-join");
+  });
 
   const taken = [...main.querySelectorAll(".m-swipe,.m-rows,.m-grid2")];
   main.querySelectorAll("div,ul,ol").forEach((e) => {
@@ -61,10 +67,22 @@ function transform(main) {
     e.classList.add("m-done");
     taken.push(e);
     if (kind === "swipe") {
+      // bleed the carousel to the edge of whatever box holds it (screen or coloured card)
+      let box = e.parentElement;
+      while (box && box !== main) {
+        const bs = cs(box);
+        if (box.tagName === "SECTION" || bs.backgroundColor !== "rgba(0, 0, 0, 0)" || bs.backgroundImage !== "none") break;
+        box = box.parentElement;
+      }
+      if (box) {
+        const gut = Math.max(12, Math.round(e.getBoundingClientRect().left - box.getBoundingClientRect().left - px(cs(box).borderLeftWidth)));
+        e.style.setProperty("--sw-gut", Math.min(gut, 28) + "px");
+      }
       e.classList.add("m-swipe");
       if (!(e.nextElementSibling && e.nextElementSibling.classList.contains("m-dots"))) {
         const dots = document.createElement("div");
         dots.className = "m-dots";
+        if (box) dots.style.color = cs(box).color;
         dots.setAttribute("aria-hidden", "true");
         dots.innerHTML = kids.map((_, i) => `<i class="${i ? "" : "on"}"></i>`).join("") + "<span>Swipe</span>";
         e.after(dots);
@@ -90,6 +108,16 @@ function transform(main) {
         });
       });
     }
+  });
+
+  main.querySelectorAll("div,span").forEach((e) => {
+    // tall empty "poster" boxes: let their content set the height
+    if (px(cs(e).minHeight) >= 260 && !e.querySelector("img") && !cs(e).backgroundImage.includes("url(")) e.classList.add("m-nomin");
+    // icon beside a tall text block: put the icon on top instead
+    if (e.closest(".m-row") || cs(e).display !== "flex" || cs(e).flexDirection !== "row" || e.children.length !== 2) return;
+    const [a, b2] = e.children;
+    const ra = a.getBoundingClientRect(), rb = b2.getBoundingClientRect();
+    if (ra.height >= 36 && ra.height <= 64 && ra.width <= ra.height + 4 && a.querySelector("svg") && rb.height > ra.height * 2 + 20) e.classList.add("m-stack");
   });
 
   main.querySelectorAll("div,a").forEach((e) => {

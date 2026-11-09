@@ -618,15 +618,20 @@ main [style*="letter-spacing: -"]:not([role="img"] *) {
 .m-dots{display:none}
 @media (max-width: 760px) {
 main{--gut:20px}
-main .m-sec{padding-top:56px !important;padding-bottom:56px !important}
+main .m-sec{padding-top:48px !important;padding-bottom:48px !important}
 main .m-sec-first{padding-bottom:48px !important}
+main .m-sec.m-sec-join{padding-top:8px !important}
+main .m-nomin{min-height:0 !important}
+main .m-stack{flex-direction:column !important;align-items:flex-start !important;gap:12px !important}
+main .m-stack > :first-child{flex:none !important}
+main a[href^="tel:"], main a[href^="mailto:"]{white-space:nowrap}
 main section > div{padding-left:var(--gut) !important;padding-right:var(--gut) !important}
 main .m-hide{display:none !important}
 main .m-static{position:static !important}
 main .m-pad{padding:24px 22px !important}
 
 /* type scale */
-main h1{font-size:36px !important;line-height:1.08 !important}
+main h1{font-size:34px !important;line-height:1.1 !important}
 main h2{font-size:29px !important;line-height:1.14 !important}
 main h3{font-size:19px !important;line-height:1.25 !important}
 main p{font-size:15.5px !important;line-height:1.6 !important}
@@ -634,7 +639,7 @@ main section > div{gap:28px !important}
 
 /* swipe carousels */
 main .m-swipe{display:flex !important;flex-direction:row !important;flex-wrap:nowrap !important;align-items:stretch !important;grid-template-columns:none !important;overflow-x:auto !important;
-  scroll-snap-type:x mandatory;gap:12px !important;margin:0 calc(var(--gut) * -1) !important;padding:2px var(--gut) 6px !important;scrollbar-width:none}
+  scroll-snap-type:x mandatory;scroll-padding-inline:var(--sw-gut, var(--gut));gap:12px !important;margin:0 calc(var(--sw-gut, var(--gut)) * -1) !important;padding:2px var(--sw-gut, var(--gut)) 6px !important;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 main .m-swipe::-webkit-scrollbar{display:none}
 main .m-swipe > *{flex:0 0 82% !important;max-width:82% !important;min-width:0 !important;scroll-snap-align:start;margin:0 !important}
 main .m-dots{display:flex;align-items:center;gap:6px;margin-top:-12px}
@@ -645,7 +650,8 @@ main .m-dots span{margin-left:auto;font-size:12px;font-weight:600;letter-spacing
 /* compact 2-up grid for short stat cards */
 main .m-grid2{display:grid !important;grid-template-columns:1fr 1fr !important;gap:10px !important;margin:0 !important}
 main .m-grid2 > *{padding:18px 16px !important;margin:0 !important;min-width:0 !important;gap:6px !important}
-main .m-grid2 > * > :first-child{font-size:26px !important}
+main .m-grid2 > * > :first-child{font-size:21px !important;line-height:1.15 !important;overflow-wrap:anywhere;hyphens:auto}
+main .m-grid2 > *{font-size:13px !important;line-height:1.4 !important}
 
 /* icon list rows */
 main .m-rows:is(.m-rows,#_m){display:flex !important;flex-direction:column !important;gap:10px !important;margin:0 !important;row-gap:10px !important}
@@ -752,4 +758,24 @@ html body main div[role="group"][aria-label="Plan type"][role][aria-label] > but
   main #problems .m-row-icon svg { width: 18px !important; height: 18px !important; }
   main #problems .m-row h3:is(h3, #_m) { font-size: 13.5px !important; line-height: 1.25 !important; }
   main #problems .m-row p:is(p, #_m) { font-size: 12px !important; line-height: 1.45 !important; }
+}
+
+@media (max-width: 760px) {
+  /* Home hero "Built for" list: neat wrapped pills instead of dangling bullets */
+  main #top div:has(> a[href="/chiropractic"]) { gap: 8px !important; padding-top: 22px !important; }
+  main #top div:has(> a[href="/chiropractic"]) > span:first-child { flex: 1 0 100%; text-align: center; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted) !important; }
+  main #top div:has(> a[href="/chiropractic"]) > span[aria-hidden] { display: none !important; }
+  main #top div:has(> a[href="/chiropractic"]) > a { padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,0.75); border: 1px solid var(--line); font-size: 13px; color: var(--ink) !important; }
+
+  /* "From first click" mini stepper: keep all four steps inside the card */
+  main div:has(> span[aria-hidden][style*="flex:0 0 14px"]),
+  main div:has(> span[aria-hidden][style*="flex: 0 0 14px"]) { padding: 16px 8px !important; gap: 2px !important; }
+  main div:has(> span[aria-hidden][style*="flex:0 0 14px"]) > span[aria-hidden],
+  main div:has(> span[aria-hidden][style*="flex: 0 0 14px"]) > span[aria-hidden] { flex: 0 0 8px !important; margin-top: 19px !important; }
+  main div:has(> span[aria-hidden][style*="flex:0 0 14px"]) > span:not([aria-hidden]) > span:first-child,
+  main div:has(> span[aria-hidden][style*="flex: 0 0 14px"]) > span:not([aria-hidden]) > span:first-child { width: 38px !important; height: 38px !important; }
+  main div:has(> span[aria-hidden][style*="flex:0 0 14px"]) > span:not([aria-hidden]) > span:last-child,
+  main div:has(> span[aria-hidden][style*="flex: 0 0 14px"]) > span:not([aria-hidden]) > span:last-child { font-size: 11px !important; white-space: nowrap; }
+  main div:has(> span[aria-hidden][style*="flex:0 0 14px"]) svg,
+  main div:has(> span[aria-hidden][style*="flex: 0 0 14px"]) svg { width: 17px; height: 17px; }
 }
