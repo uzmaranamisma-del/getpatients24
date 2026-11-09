@@ -17,7 +17,7 @@ export default function EyeClinicsPage() {
       <h1 style={{ margin: "0", fontFamily: "'Poppins', sans-serif", fontWeight: "800", fontSize: "clamp(44px, 5.8vw, 84px)", lineHeight: "1.0", letterSpacing: "-0.04em" }}>Turn vision questions into{" "}<span style={{ color: "var(--hi)" }}>booked consultations</span>, week after week.</h1>
       <p style={{ margin: "0", fontSize: "20px", lineHeight: "1.6", color: "#DCEBF5", maxWidth: "680px" }}>From vision correction to cataract and lens procedures, we find patients who are ready, answer them fast, and stay with them until the consult is on your calendar.</p>
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "14px" }}>
-      <Link href="/book-demo" style={{ display: "inline-flex", alignItems: "center", gap: "10px", minHeight: "60px", padding: "0 32px", borderRadius: "999px", background: "var(--hi)", color: "var(--ink)", fontWeight: "800", fontSize: "17px", textDecoration: "none" }}>Book a free demo<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></Link>
+      <Link href="/book-demo" style={{ display: "inline-flex", alignItems: "center", gap: "10px", minHeight: "60px", padding: "0 32px", borderRadius: "999px", background: "var(--hi)", color: "var(--ink)", fontWeight: "800", fontSize: "17px", textDecoration: "none" }}>Book a free meeting<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></Link>
       <a href="#eye-process" style={{ display: "inline-flex", alignItems: "center", minHeight: "60px", padding: "0 28px", borderRadius: "999px", border: "1.5px solid rgba(255,255,255,0.3)", color: "#FFFFFF", fontWeight: "600", fontSize: "17px", textDecoration: "none" }}>See how it works</a>
       </div>
       </div>
@@ -71,7 +71,7 @@ export default function EyeClinicsPage() {
       <div style={{ borderRadius: "22px", background: "#FFFFFF", color: "var(--ink)", padding: "24px", display: "flex", flexDirection: "column", gap: "8px" }}><span style={{ fontSize: "13px", fontWeight: "800", color: "var(--priD)" }}>FIT</span><span style={{ fontSize: "18px", fontWeight: "700" }}>Is your treatment right for them?</span><span style={{ fontSize: "14px", lineHeight: "1.5", color: "var(--muted)" }}>Insurance, financing or budget that fits the procedure.</span></div>
       <div style={{ borderRadius: "22px", background: "#FFFFFF", color: "var(--ink)", padding: "24px", display: "flex", flexDirection: "column", gap: "8px" }}><span style={{ fontSize: "13px", fontWeight: "800", color: "var(--priD)" }}>TIMING</span><span style={{ fontSize: "18px", fontWeight: "700" }}>Will they start soon?</span><span style={{ fontSize: "14px", lineHeight: "1.5", color: "var(--muted)" }}>Ready to schedule within the next few weeks.</span></div>
       </div>
-      <Link href="/book-demo" style={{ position: "relative", display: "inline-flex", alignItems: "center", minHeight: "56px", padding: "0 30px", borderRadius: "999px", background: "#FFFFFF", color: "var(--ink)", fontWeight: "700", fontSize: "16px", textDecoration: "none" }}>Book a demo</Link>
+      <Link href="/book-demo" style={{ position: "relative", display: "inline-flex", alignItems: "center", minHeight: "56px", padding: "0 30px", borderRadius: "999px", background: "#FFFFFF", color: "var(--ink)", fontWeight: "700", fontSize: "16px", textDecoration: "none" }}>Book a meeting</Link>
       </div>
       </section>
 
@@ -82,7 +82,7 @@ export default function EyeClinicsPage() {
       <span style={{ fontSize: "14px", fontWeight: "700", letterSpacing: "0.1em", color: "var(--priD)" }}>HOW IT WORKS FOR EYE CLINICS</span>
       <h2 style={{ margin: "0", fontFamily: "'Poppins', sans-serif", fontWeight: "800", fontSize: "clamp(32px, 3.4vw, 48px)", lineHeight: "1.05", letterSpacing: "-0.035em" }}>From first question to{" "}<span style={{ color: "var(--pri)" }}>booked consult</span></h2>
       <p style={{ margin: "0", fontSize: "17px", lineHeight: "1.65", color: "var(--muted)" }}>Four connected stages that turn curious searchers into evaluated, scheduled patients.</p>
-      <Link href="/book-demo" style={{ alignSelf: "flex-start", display: "inline-flex", alignItems: "center", minHeight: "54px", padding: "0 28px", borderRadius: "999px", background: "var(--pri)", color: "#FFFFFF", fontWeight: "700", fontSize: "16px", textDecoration: "none" }}>Book a demo</Link>
+      <Link href="/book-demo" style={{ alignSelf: "flex-start", display: "inline-flex", alignItems: "center", minHeight: "54px", padding: "0 28px", borderRadius: "999px", background: "var(--pri)", color: "#FFFFFF", fontWeight: "700", fontSize: "16px", textDecoration: "none" }}>Book a meeting</Link>
       </div>
       </div>
       <div style={{ flex: "1.4 1 560px", minWidth: "0", display: "flex", flexDirection: "column", gap: "20px" }}>
@@ -119,9 +119,9 @@ export default function EyeClinicsPage() {
       <div style={{ position: "relative", overflow: "hidden", maxWidth: "1240px", margin: "0 auto", borderRadius: "40px", background: "linear-gradient(135deg, var(--ink) 0%, var(--pri) 100%)", color: "#FFFFFF", padding: "clamp(48px, 7vw, 96px) clamp(28px, 6vw, 80px)", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "22px" }}>
       <div aria-hidden="true" style={{ position: "absolute", inset: "0", backgroundImage: "radial-gradient(rgba(255,255,255,0.1) 1.3px, transparent 1.3px)", backgroundSize: "26px 26px" }}></div>
       <h2 style={{ position: "relative", margin: "0", maxWidth: "820px", fontFamily: "'Poppins', sans-serif", fontWeight: "800", fontSize: "clamp(36px, 4.8vw, 66px)", lineHeight: "1.02", letterSpacing: "-0.04em" }}>Ready to see more patients in your clinic?</h2>
-      <p style={{ position: "relative", margin: "0", maxWidth: "620px", fontSize: "19px", lineHeight: "1.6", color: "#DCEBF5" }}>Book a free demo and we'll show you how we'd attract, qualify and book more of the right patients for your eye clinic.</p>
+      <p style={{ position: "relative", margin: "0", maxWidth: "620px", fontSize: "19px", lineHeight: "1.6", color: "#DCEBF5" }}>Book a free meeting and we'll show you how we'd attract, qualify and book more of the right patients for your eye clinic.</p>
       <div style={{ position: "relative", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "14px" }}>
-      <Link href="/book-demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "60px", padding: "0 32px", borderRadius: "999px", background: "var(--hi)", color: "var(--ink)", fontWeight: "800", fontSize: "17px", textDecoration: "none" }}>Book a free demo</Link>
+      <Link href="/book-demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "60px", padding: "0 32px", borderRadius: "999px", background: "var(--hi)", color: "var(--ink)", fontWeight: "800", fontSize: "17px", textDecoration: "none" }}>Book a free meeting</Link>
       <a href="#eye-process" style={{ display: "inline-flex", alignItems: "center", minHeight: "60px", padding: "0 28px", borderRadius: "999px", border: "1.5px solid rgba(255,255,255,0.35)", color: "#FFFFFF", fontWeight: "600", fontSize: "17px", textDecoration: "none" }}>See how it works</a>
       </div>
       </div>

@@ -16,7 +16,7 @@ export default function PatientAcquisitionPage() {
       <h1 style={{ margin: "0", fontFamily: "'Poppins', sans-serif", fontWeight: "800", fontSize: "clamp(44px, 5.6vw, 80px)", lineHeight: "1.0", letterSpacing: "-0.04em" }}>Done-For-You Patient Acquisition</h1>
       <p style={{ margin: "0", fontSize: "20px", lineHeight: "1.6", color: "#C4D2E0", maxWidth: "680px" }}>We plan, launch and manage everything that brings new patients to your clinic, from the first ad to the confirmed appointment. You get a full calendar without hiring a marketing team.</p>
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "14px" }}>
-      <Link href="/book-demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "58px", padding: "0 30px", borderRadius: "999px", background: "var(--pri)", color: "#FFFFFF", fontWeight: "700", fontSize: "17px", textDecoration: "none" }}>Book a free demo</Link>
+      <Link href="/book-demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "58px", padding: "0 30px", borderRadius: "999px", background: "var(--pri)", color: "#FFFFFF", fontWeight: "700", fontSize: "17px", textDecoration: "none" }}>Book a free meeting</Link>
       <Link href="/pricing-plans" style={{ display: "inline-flex", alignItems: "center", minHeight: "58px", padding: "0 28px", borderRadius: "999px", border: "1.5px solid rgba(255,255,255,0.3)", color: "#FFFFFF", fontWeight: "600", fontSize: "17px", textDecoration: "none" }}>See pricing</Link>
       </div>
       </div>
@@ -89,7 +89,7 @@ export default function PatientAcquisitionPage() {
       <section style={{ padding: "0 24px 112px", background: "var(--ground)" }}>
       <div style={{ maxWidth: "1240px", margin: "0 auto", borderRadius: "40px", background: "var(--pri)", color: "#FFFFFF", padding: "clamp(44px, 6vw, 80px)", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "32px" }}>
       <h2 style={{ margin: "0", maxWidth: "720px", fontFamily: "'Poppins', sans-serif", fontWeight: "800", fontSize: "clamp(34px, 4.2vw, 56px)", lineHeight: "1.05", letterSpacing: "-0.035em" }}>Ready for a fuller calendar?</h2>
-      <Link href="/book-demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "60px", padding: "0 32px", borderRadius: "999px", background: "#FFFFFF", color: "var(--ink)", fontWeight: "700", fontSize: "17px", textDecoration: "none" }}>Book a free demo</Link>
+      <Link href="/book-demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "60px", padding: "0 32px", borderRadius: "999px", background: "#FFFFFF", color: "var(--ink)", fontWeight: "700", fontSize: "17px", textDecoration: "none" }}>Book a free meeting</Link>
       </div>
       </section>
     </>

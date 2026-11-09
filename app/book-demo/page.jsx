@@ -1,7 +1,7 @@
 import BookingForm from "@/components/BookingForm";
 
 export const metadata = {
-  title: "Book a Demo | GetPatients24",
+  title: "Book a Meeting | GetPatients24",
   description: "Book your free patient growth strategy call with GetPatients24.",
 };
 
@@ -11,7 +11,7 @@ export default function BookDemoPage() {
       <section style={{ background: "linear-gradient(180deg, var(--soft) 0%, #FFFFFF 100%)", padding: "96px 0 64px", position: "relative", overflow: "hidden", isolation: "isolate" }}>
       <div aria-hidden="true" style={{ position: "absolute", inset: "0", zIndex: "-1", backgroundImage: "url(/hero-team-review.webp)", backgroundSize: "cover", backgroundPosition: "center center" }}></div><div aria-hidden="true" style={{ position: "absolute", inset: "0", zIndex: "-1", background: "radial-gradient(ellipse 62% 78% at 50% 50%, rgba(242,251,253,0.93) 0%, rgba(236,249,252,0.8) 55%, rgba(202,240,248,0.5) 100%)" }}></div><div aria-hidden="true" style={{ position: "absolute", inset: "0", zIndex: "-1", background: "linear-gradient(180deg, rgba(255,255,255,0) 60%, #FFFFFF 100%)" }}></div>
       <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "22px" }}>
-      <span style={{ fontSize: "14px", fontWeight: "700", letterSpacing: "0.1em", color: "var(--priD)" }}>BOOK A DEMO</span>
+      <span style={{ fontSize: "14px", fontWeight: "700", letterSpacing: "0.1em", color: "var(--priD)" }}>BOOK A MEETING</span>
       <h1 style={{ margin: "0", maxWidth: "940px", fontFamily: "'Poppins', sans-serif", fontWeight: "800", fontSize: "clamp(44px, 5.6vw, 78px)", lineHeight: "1.0", letterSpacing: "-0.04em" }}>Book your{" "}<span style={{ color: "var(--pri)" }}>patient growth</span>{" "}strategy call</h1>
       <p style={{ margin: "0", maxWidth: "700px", fontSize: "20px", lineHeight: "1.6", color: "var(--muted)" }}>See how GetPatients24 can help your clinic attract, qualify and book more of the right patients, straight into your calendar.</p>
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "12px" }}><span style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "10px 18px", borderRadius: "999px", background: "#FFFFFF", border: "1px solid var(--line)", fontSize: "15px", fontWeight: "600" }}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ stroke: "var(--pri)" }}><path d="M20 6 9 17l-5-5"></path></svg>Free 30-minute call</span><span style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "10px 18px", borderRadius: "999px", background: "#FFFFFF", border: "1px solid var(--line)", fontSize: "15px", fontWeight: "600" }}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ stroke: "var(--pri)" }}><path d="M20 6 9 17l-5-5"></path></svg>No obligation</span><span style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "10px 18px", borderRadius: "999px", background: "#FFFFFF", border: "1px solid var(--line)", fontSize: "15px", fontWeight: "600" }}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ stroke: "var(--pri)" }}><path d="M20 6 9 17l-5-5"></path></svg>Clear next steps</span></div>

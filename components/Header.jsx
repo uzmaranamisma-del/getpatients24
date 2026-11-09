@@ -102,7 +102,7 @@ export default function Header() {
               <PhoneIcon />
             </a>
             <Link href="/book-demo" className="cta-btn">
-              Book a demo
+              Book a meeting
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M5 12h14" />
                 <path d="M13 6l6 6-6 6" />
@@ -138,7 +138,7 @@ export default function Header() {
           <Link href="/pricing-plans" aria-current={current("/pricing-plans")}>Pricing</Link>
           <Link href="/about" aria-current={current("/about")}>About</Link>
           <a href={PHONE_HREF}>Call {PHONE}</a>
-          <Link href="/book-demo" className="cta-btn menu-cta">Book a demo</Link>
+          <Link href="/book-demo" className="cta-btn menu-cta">Book a meeting</Link>
         </nav>
       </header>
     </>

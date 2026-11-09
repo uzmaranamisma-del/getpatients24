@@ -16,7 +16,7 @@ export default function AIBookingSystemPage() {
       <h1 style={{ margin: "0", fontFamily: "'Poppins', sans-serif", fontWeight: "800", fontSize: "clamp(44px, 5.6vw, 78px)", lineHeight: "1.0", letterSpacing: "-0.04em" }}>A clinic website that{" "}<span style={{ color: "var(--pri)" }}>books patients</span>{" "}while you sleep.</h1>
       <p style={{ margin: "0", fontSize: "20px", lineHeight: "1.6", color: "var(--muted)", maxWidth: "680px" }}>A fast, modern website paired with an AI assistant that answers questions, qualifies visitors and books appointments 24/7, by chat, text or phone.</p>
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "14px" }}>
-      <Link href="/book-demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "58px", padding: "0 30px", borderRadius: "999px", background: "var(--pri)", color: "#FFFFFF", fontWeight: "700", fontSize: "17px", textDecoration: "none" }}>See a live demo</Link>
+      <Link href="/book-demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "58px", padding: "0 30px", borderRadius: "999px", background: "var(--pri)", color: "#FFFFFF", fontWeight: "700", fontSize: "17px", textDecoration: "none" }}>Book a meeting</Link>
       <Link href="/pricing-plans" style={{ display: "inline-flex", alignItems: "center", minHeight: "58px", padding: "0 28px", borderRadius: "999px", background: "#FFFFFF", border: "1.5px solid var(--line)", color: "var(--ink)", fontWeight: "600", fontSize: "17px", textDecoration: "none" }}>See pricing</Link>
       </div>
       </div>
@@ -90,7 +90,7 @@ export default function AIBookingSystemPage() {
       <section style={{ padding: "0 24px 112px", background: "var(--ground)" }}>
       <div style={{ maxWidth: "1240px", margin: "0 auto", borderRadius: "40px", background: "var(--night)", color: "#FFFFFF", padding: "clamp(44px, 6vw, 80px)", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "32px" }}>
       <h2 style={{ margin: "0", maxWidth: "720px", fontFamily: "'Poppins', sans-serif", fontWeight: "800", fontSize: "clamp(34px, 4.2vw, 56px)", lineHeight: "1.05", letterSpacing: "-0.035em" }}>See the AI book a patient, live.</h2>
-      <Link href="/book-demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "60px", padding: "0 32px", borderRadius: "999px", background: "var(--pri)", color: "#FFFFFF", fontWeight: "700", fontSize: "17px", textDecoration: "none" }}>Book a free demo</Link>
+      <Link href="/book-demo" style={{ display: "inline-flex", alignItems: "center", minHeight: "60px", padding: "0 32px", borderRadius: "999px", background: "var(--pri)", color: "#FFFFFF", fontWeight: "700", fontSize: "17px", textDecoration: "none" }}>Book a free meeting</Link>
       </div>
       </section>
     </>

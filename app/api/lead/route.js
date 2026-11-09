@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-// Every form on the site posts here (homepage form, Book Demo questions, chosen demo slot).
+// Every form on the site posts here (homepage form, Book a Meeting questions, chosen meeting slot).
 // Each submission is emailed to LEAD_TO_EMAIL (default getpatients24@gmail.com) through Gmail SMTP.
 // Optional: LEAD_WEBHOOK_URL also forwards the lead as JSON to n8n / Make / Zapier / a CRM.
 
@@ -20,7 +20,7 @@ const LABELS = {
   challenge: "Biggest challenge",
   goal: "Notes",
   message: "Message",
-  slot: "Chosen demo time",
+  slot: "Chosen meeting time",
   timezone: "Visitor time zone",
   source: "Form",
   page: "Page",
@@ -45,7 +45,7 @@ function emailBody(lead) {
     .join("");
   const html = `<div style="font-family:Arial,sans-serif;max-width:560px">
 <h2 style="margin:0 0 4px;color:#023e8a">New lead from GetPatients24</h2>
-<p style="margin:0 0 16px;color:#3f5a70">${lead.slot ? "A demo time was chosen." : "A form was submitted on the website."}</p>
+<p style="margin:0 0 16px;color:#3f5a70">${lead.slot ? "A meeting time was chosen." : "A form was submitted on the website."}</p>
 <table style="border-collapse:collapse;width:100%;border:1px solid #e6edf3;border-radius:8px">${rows}</table>
 <p style="margin:16px 0 0;color:#3f5a70;font-size:13px">Reply to this email to answer the lead directly.</p></div>`;
   const text = Object.entries(lead).map(([k, v]) => `${LABELS[k] || k}: ${v}`).join("\n");
@@ -95,7 +95,7 @@ export async function POST(request) {
           from: `"GetPatients24 Website" <${process.env.SMTP_USER || TO}>`,
           to: TO,
           replyTo: lead.email || undefined,
-          subject: `${lead.slot ? "Demo booked" : "New lead"}: ${who}`,
+          subject: `${lead.slot ? "Meeting booked" : "New lead"}: ${who}`,
           text,
           html,
         })
