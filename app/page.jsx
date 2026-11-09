@@ -79,9 +79,10 @@ export default function MainPage() {
       </div>
       </section>
 
-      <div style={{ background: "var(--pri)", color: "#FFFFFF", padding: "26px 0", overflow: "hidden" }}>
-      <div style={{ display: "flex", gap: "44px", whiteSpace: "nowrap", justifyContent: "center", fontFamily: "'Poppins', sans-serif", fontWeight: "800", fontSize: "clamp(22px, 2.6vw, 36px)", letterSpacing: "-0.01em" }}>
-      <span>Real Data</span><span style={{ color: "var(--hi)" }}>✚</span><span>Real Conversations</span><span style={{ color: "var(--hi)" }}>✚</span><span>Real Patients</span><span style={{ color: "var(--hi)" }}>✚</span><span>Real Data</span><span style={{ color: "var(--hi)" }}>✚</span><span>Real Conversations</span>
+      <div className="marquee" role="marquee" aria-label="Real Data, Real Conversations, Real Patients">
+      <div className="marquee-track">
+      <div className="marquee-group"><span>Real Data</span><span className="marquee-plus" aria-hidden="true">✚</span><span>Real Conversations</span><span className="marquee-plus" aria-hidden="true">✚</span><span>Real Patients</span><span className="marquee-plus" aria-hidden="true">✚</span><span>Real Data</span><span className="marquee-plus" aria-hidden="true">✚</span><span>Real Conversations</span><span className="marquee-plus" aria-hidden="true">✚</span><span>Real Patients</span><span className="marquee-plus" aria-hidden="true">✚</span></div>
+      <div className="marquee-group" aria-hidden="true"><span>Real Data</span><span className="marquee-plus" aria-hidden="true">✚</span><span>Real Conversations</span><span className="marquee-plus" aria-hidden="true">✚</span><span>Real Patients</span><span className="marquee-plus" aria-hidden="true">✚</span><span>Real Data</span><span className="marquee-plus" aria-hidden="true">✚</span><span>Real Conversations</span><span className="marquee-plus" aria-hidden="true">✚</span><span>Real Patients</span><span className="marquee-plus" aria-hidden="true">✚</span></div>
       </div>
       </div>
 
