@@ -54,7 +54,7 @@ export default function ContactForm() {
       {sent && (<>
       <div role="status" style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "14px", padding: "24px 8px" }}>
       <span style={{ width: "72px", height: "72px", borderRadius: "999px", background: "var(--pri)", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 12px 26px rgba(0,119,182,0.3)" }}><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></span>
-      <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: "800", fontSize: "26px" }}>Thanks,{" "}{sentName}!</span>
+      <span style={{ fontFamily: "'Poppins', sans-serif", fontWeight: "800", fontSize: "26px" }}>Thanks,{" "}{sentName}!</span>
       <span style={{ fontSize: "16px", lineHeight: "1.6", color: "var(--muted)" }}>Your request is in. We'll email you within one business day to schedule your free patient flow review.</span>
       <button type="button" onClick={resetForm} style={{ minHeight: "48px", padding: "0 22px", borderRadius: "999px", border: "1.5px solid var(--line)", background: "#FFFFFF", color: "var(--ink)", fontWeight: "600", fontFamily: "inherit", cursor: "pointer" }}>Send another request</button>
       </div>

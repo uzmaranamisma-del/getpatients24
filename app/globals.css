@@ -28,7 +28,7 @@ body {
   margin: 0;
   background: var(--ground);
   color: var(--ink);
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -593,4 +593,10 @@ button:disabled {
   main #problems [style*="repeat(4, minmax(0, 1fr))"] {
     grid-template-columns: minmax(0, 1fr) !important;
   }
+}
+
+/* Poppins is wider than the old heading font: relax the tight negative tracking */
+main [style*="letter-spacing:-"]:not([role="img"] *),
+main [style*="letter-spacing: -"]:not([role="img"] *) {
+  letter-spacing: -0.01em !important;
 }
