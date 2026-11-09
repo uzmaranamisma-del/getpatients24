@@ -3,6 +3,7 @@
 export const metadata = {
   title: "Terms & Conditions | GetPatients24",
   description: "The terms that apply to using the GetPatients24 website and services.",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {

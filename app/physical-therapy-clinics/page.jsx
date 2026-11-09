@@ -1,8 +1,11 @@
+import { OG_IMAGES } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Patient Growth for Physical Therapy Clinics | GetPatients24",
-  description: "More evaluations booked and fewer drop-offs for physical therapy clinics.",
+  title: "Physical Therapy Marketing: More Patients | GetPatients24",
+  description: "Physical therapy marketing that books more evaluations and cuts drop-offs. GetPatients24 runs your ads, follow-up and AI booking end to end.",
+  alternates: { canonical: "/physical-therapy-clinics" },
+  openGraph: { title: "Physical Therapy Marketing: More Patients | GetPatients24", description: "Physical therapy marketing that books more evaluations and cuts drop-offs. GetPatients24 runs your ads, follow-up and AI booking end to end.", url: "/physical-therapy-clinics", siteName: "GetPatients24", type: "website", images: OG_IMAGES },
 };
 
 export default function PhysicalTherapyPage() {

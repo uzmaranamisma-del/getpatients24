@@ -1,8 +1,11 @@
+import { OG_IMAGES } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Patient Growth for Eye Clinics | GetPatients24",
-  description: "More booked consultations for eye clinics, from vision correction to cataract care.",
+  title: "Eye Clinic & Ophthalmology Marketing | GetPatients24",
+  description: "Eye clinic marketing that books more consultations, from LASIK and vision correction to cataract care. Patient acquisition and AI booking by GetPatients24.",
+  alternates: { canonical: "/eye-clinics" },
+  openGraph: { title: "Eye Clinic & Ophthalmology Marketing | GetPatients24", description: "Eye clinic marketing that books more consultations, from LASIK and vision correction to cataract care. Patient acquisition and AI booking by GetPatients24.", url: "/eye-clinics", siteName: "GetPatients24", type: "website", images: OG_IMAGES },
 };
 
 export default function EyeClinicsPage() {

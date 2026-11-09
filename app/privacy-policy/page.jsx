@@ -3,6 +3,7 @@
 export const metadata = {
   title: "Privacy Policy | GetPatients24",
   description: "How GetPatients24 collects, uses and protects your information.",
+  alternates: { canonical: "/privacy-policy" },
 };
 
 export default function PrivacyPage() {

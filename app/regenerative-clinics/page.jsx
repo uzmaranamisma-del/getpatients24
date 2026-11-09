@@ -1,8 +1,11 @@
+import { OG_IMAGES } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Patient Growth for Regenerative Clinics | GetPatients24",
-  description: "Qualified, ready-to-book patients for regenerative medicine clinics.",
+  title: "Regenerative Medicine Clinic Marketing | GetPatients24",
+  description: "Marketing for regenerative medicine clinics that brings qualified, ready-to-book patients. Ads, follow-up and AI booking managed by GetPatients24.",
+  alternates: { canonical: "/regenerative-clinics" },
+  openGraph: { title: "Regenerative Medicine Clinic Marketing | GetPatients24", description: "Marketing for regenerative medicine clinics that brings qualified, ready-to-book patients. Ads, follow-up and AI booking managed by GetPatients24.", url: "/regenerative-clinics", siteName: "GetPatients24", type: "website", images: OG_IMAGES },
 };
 
 export default function RegenerativePage() {

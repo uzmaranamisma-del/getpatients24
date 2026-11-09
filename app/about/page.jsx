@@ -1,8 +1,11 @@
+import { OG_IMAGES } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = {
-  title: "About Us | GetPatients24",
-  description: "Meet GetPatients24, the clinic growth team behind patient acquisition and AI booking systems.",
+  title: "About GetPatients24 | Patient Growth Agency for Clinics",
+  description: "Meet GetPatients24, the patient growth team for medical clinics. We bring you patients, follow up fast and get them booked into your calendar.",
+  alternates: { canonical: "/about" },
+  openGraph: { title: "About GetPatients24 | Patient Growth Agency for Clinics", description: "Meet GetPatients24, the patient growth team for medical clinics. We bring you patients, follow up fast and get them booked into your calendar.", url: "/about", siteName: "GetPatients24", type: "website", images: OG_IMAGES },
 };
 
 export default function AboutPage() {

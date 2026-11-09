@@ -1,8 +1,11 @@
+import { OG_IMAGES } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Client Growth for Med Spas | GetPatients24",
-  description: "Booked, returning clients for med spas.",
+  title: "Med Spa Marketing: Get More Booked Clients | GetPatients24",
+  description: "Med spa marketing that turns ad clicks into booked, returning clients. Done-for-you campaigns, instant follow-up and AI booking from GetPatients24.",
+  alternates: { canonical: "/med-spa" },
+  openGraph: { title: "Med Spa Marketing: Get More Booked Clients | GetPatients24", description: "Med spa marketing that turns ad clicks into booked, returning clients. Done-for-you campaigns, instant follow-up and AI booking from GetPatients24.", url: "/med-spa", siteName: "GetPatients24", type: "website", images: OG_IMAGES },
 };
 
 export default function MedSpaPage() {

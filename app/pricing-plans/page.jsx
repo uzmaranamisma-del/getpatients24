@@ -1,9 +1,12 @@
+import { OG_IMAGES } from "@/lib/site";
 import Link from "next/link";
 import PricingPlans from "@/components/PricingPlans";
 
 export const metadata = {
-  title: "Pricing Plans | GetPatients24",
-  description: "Organic and paid growth plans for clinics, from $297/month. One-time $997 setup, live in 7 to 10 working days.",
+  title: "Clinic Marketing Pricing: Plans from $297/mo | GetPatients24",
+  description: "Simple pricing for clinic marketing and patient acquisition. Organic and paid growth plans from $297/month, one-time $997 setup, live in 7 to 10 working days.",
+  alternates: { canonical: "/pricing-plans" },
+  openGraph: { title: "Clinic Marketing Pricing: Plans from $297/mo | GetPatients24", description: "Simple pricing for clinic marketing and patient acquisition. Organic and paid growth plans from $297/month, one-time $997 setup, live in 7 to 10 working days.", url: "/pricing-plans", siteName: "GetPatients24", type: "website", images: OG_IMAGES },
 };
 
 export default function PricingPage() {

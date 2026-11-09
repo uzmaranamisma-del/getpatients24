@@ -1,8 +1,11 @@
+import { OG_IMAGES } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Patient Growth for Surgeons | GetPatients24",
-  description: "More qualified surgical consultations for surgeons and specialists.",
+  title: "Marketing for Surgeons: More Consultations | GetPatients24",
+  description: "Marketing for surgeons and specialists that books more qualified surgical consultations. Patient acquisition, follow-up and AI booking by GetPatients24.",
+  alternates: { canonical: "/surgeons" },
+  openGraph: { title: "Marketing for Surgeons: More Consultations | GetPatients24", description: "Marketing for surgeons and specialists that books more qualified surgical consultations. Patient acquisition, follow-up and AI booking by GetPatients24.", url: "/surgeons", siteName: "GetPatients24", type: "website", images: OG_IMAGES },
 };
 
 export default function SurgeonsPage() {

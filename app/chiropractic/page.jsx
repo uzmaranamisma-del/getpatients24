@@ -1,8 +1,11 @@
+import { OG_IMAGES } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Patient Growth for Chiropractors | GetPatients24",
-  description: "More new patients and care plans for chiropractic clinics.",
+  title: "Chiropractic Marketing: Get More New Patients | GetPatients24",
+  description: "Chiropractic marketing that fills your schedule. GetPatients24 brings chiropractors more new patients and care plans with ads, follow-up and AI booking.",
+  alternates: { canonical: "/chiropractic" },
+  openGraph: { title: "Chiropractic Marketing: Get More New Patients | GetPatients24", description: "Chiropractic marketing that fills your schedule. GetPatients24 brings chiropractors more new patients and care plans with ads, follow-up and AI booking.", url: "/chiropractic", siteName: "GetPatients24", type: "website", images: OG_IMAGES },
 };
 
 export default function ChiropracticPage() {

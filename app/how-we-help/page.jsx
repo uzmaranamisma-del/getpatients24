@@ -1,8 +1,11 @@
+import { OG_IMAGES } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = {
-  title: "How We Help | GetPatients24",
-  description: "See how GetPatients24 helps chiropractors, regenerative clinics, physical therapists, dentists, med spas, eye clinics and surgeons book more patients.",
+  title: "Healthcare Marketing for Clinics | GetPatients24",
+  description: "See how GetPatients24 helps chiropractors, dentists, med spas, eye clinics, physical therapists, regenerative clinics and surgeons book more patients.",
+  alternates: { canonical: "/how-we-help" },
+  openGraph: { title: "Healthcare Marketing for Clinics | GetPatients24", description: "See how GetPatients24 helps chiropractors, dentists, med spas, eye clinics, physical therapists, regenerative clinics and surgeons book more patients.", url: "/how-we-help", siteName: "GetPatients24", type: "website", images: OG_IMAGES },
 };
 
 export default function HowWeHelpPage() {

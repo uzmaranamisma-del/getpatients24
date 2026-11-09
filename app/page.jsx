@@ -1,14 +1,46 @@
+import { OG_IMAGES, SITE_URL, CONTACT_EMAIL } from "@/lib/site";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
-  title: "Get More Patients for Your Clinic | GetPatients24",
-  description: "Get more of the right patients for your clinic. GetPatients24 runs done-for-you marketing, fast lead follow-up and AI booking for dental, med spa & more.",
+  title: "GetPatients24 | Get More Patients for Your Clinic",
+  description: "GetPatients24 helps clinics get more new patients with done-for-you marketing, instant lead follow-up and AI booking. Book a free strategy call today.",
+  alternates: { canonical: "/" },
+  openGraph: { title: "GetPatients24 | Get More Patients for Your Clinic", description: "GetPatients24 helps clinics get more new patients with done-for-you marketing, instant lead follow-up and AI booking. Book a free strategy call today.", url: "/", siteName: "GetPatients24", type: "website", images: OG_IMAGES },
+};
+
+// Tells Google the site's name ("GetPatients24") and who runs it, so brand searches can find it.
+const BRAND_SCHEMA = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: `${SITE_URL}/`,
+      name: "GetPatients24",
+      alternateName: ["Get Patients 24", "GetPatients 24", "getpatients24.com"],
+      publisher: { "@id": `${SITE_URL}/#organization` },
+    },
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "GetPatients24",
+      alternateName: "Get Patients 24",
+      url: `${SITE_URL}/`,
+      logo: `${SITE_URL}/brand/getpatients24-logo-app-icon.png`,
+      image: `${SITE_URL}/og-image.jpg`,
+      description: "Patient acquisition, lead follow-up and AI booking for medical clinics.",
+      email: CONTACT_EMAIL,
+      telephone: "+1-786-619-8997",
+      contactPoint: [{ "@type": "ContactPoint", telephone: "+1-786-619-8997", email: CONTACT_EMAIL, contactType: "sales", availableLanguage: "English" }],
+    },
+  ],
 };
 
 export default function MainPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BRAND_SCHEMA) }} />
       <section id="top" className="home-hero" style={{ position: "relative", overflow: "hidden", background: "linear-gradient(180deg, var(--soft) 0%, #FFFFFF 100%)", padding: "112px 0 104px" }}>
       <div aria-hidden="true" style={{ position: "absolute", inset: "0", backgroundImage: "url(/hero-doctors.webp)", backgroundSize: "cover", backgroundPosition: "center center" }}></div>
       <div aria-hidden="true" style={{ position: "absolute", inset: "0", background: "radial-gradient(ellipse 52% 62% at 50% 48%, rgba(242,251,253,0.86) 0%, rgba(236,249,252,0.7) 50%, rgba(202,240,248,0.38) 100%)" }}></div>

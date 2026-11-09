@@ -1,8 +1,11 @@
+import { OG_IMAGES } from "@/lib/site";
 import BookingForm from "@/components/BookingForm";
 
 export const metadata = {
-  title: "Book a Meeting | GetPatients24",
-  description: "Book your free patient growth strategy call with GetPatients24.",
+  title: "Book a Free Strategy Call | GetPatients24",
+  description: "Book a free 30-minute patient growth call with GetPatients24. See where your clinic is losing new patients and get a clear plan to fix it.",
+  alternates: { canonical: "/book-demo" },
+  openGraph: { title: "Book a Free Strategy Call | GetPatients24", description: "Book a free 30-minute patient growth call with GetPatients24. See where your clinic is losing new patients and get a clear plan to fix it.", url: "/book-demo", siteName: "GetPatients24", type: "website", images: OG_IMAGES },
 };
 
 export default function BookDemoPage() {

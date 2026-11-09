@@ -1,8 +1,11 @@
+import { OG_IMAGES } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Website + AI Patient Booking System | GetPatients24",
-  description: "A clinic website plus an AI booking assistant that answers, qualifies and books patients 24/7.",
+  title: "Medical Website + AI Patient Booking 24/7 | GetPatients24",
+  description: "A high-converting clinic website plus an AI booking assistant that answers, qualifies and books patients 24/7, so no new patient enquiry slips away.",
+  alternates: { canonical: "/website-ai-booking-system" },
+  openGraph: { title: "Medical Website + AI Patient Booking 24/7 | GetPatients24", description: "A high-converting clinic website plus an AI booking assistant that answers, qualifies and books patients 24/7, so no new patient enquiry slips away.", url: "/website-ai-booking-system", siteName: "GetPatients24", type: "website", images: OG_IMAGES },
 };
 
 export default function AIBookingSystemPage() {

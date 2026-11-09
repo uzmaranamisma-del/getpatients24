@@ -1,8 +1,11 @@
+import { OG_IMAGES } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Patient Growth for Dental Clinics | GetPatients24",
-  description: "More new patients and accepted treatment plans for dental practices.",
+  title: "Dental Marketing: Get More New Patients | GetPatients24",
+  description: "Dental marketing for practices that want more new patients and accepted treatment plans. Done-for-you ads, fast follow-up and AI booking by GetPatients24.",
+  alternates: { canonical: "/dental-clinics" },
+  openGraph: { title: "Dental Marketing: Get More New Patients | GetPatients24", description: "Dental marketing for practices that want more new patients and accepted treatment plans. Done-for-you ads, fast follow-up and AI booking by GetPatients24.", url: "/dental-clinics", siteName: "GetPatients24", type: "website", images: OG_IMAGES },
 };
 
 export default function DentalPage() {

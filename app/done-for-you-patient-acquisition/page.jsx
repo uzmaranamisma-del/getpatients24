@@ -1,8 +1,11 @@
+import { OG_IMAGES } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Done-For-You Patient Acquisition | GetPatients24",
-  description: "Done-for-you patient acquisition: ads, landing pages, follow-up and booking, managed end to end for your clinic.",
+  title: "Done-For-You Patient Acquisition for Clinics | GetPatients24",
+  description: "Done-for-you patient acquisition for clinics: ads, landing pages, lead follow-up and booking, fully managed by GetPatients24 so your team never chases leads.",
+  alternates: { canonical: "/done-for-you-patient-acquisition" },
+  openGraph: { title: "Done-For-You Patient Acquisition for Clinics | GetPatients24", description: "Done-for-you patient acquisition for clinics: ads, landing pages, lead follow-up and booking, fully managed by GetPatients24 so your team never chases leads.", url: "/done-for-you-patient-acquisition", siteName: "GetPatients24", type: "website", images: OG_IMAGES },
 };
 
 export default function PatientAcquisitionPage() {

@@ -1,20 +1,24 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, OG_IMAGES } from "@/lib/site";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Get More Patients for Your Clinic | GetPatients24",
+    default: "GetPatients24 | Get More Patients for Your Clinic",
     template: "%s",
   },
   description:
     "Get more of the right patients for your clinic. GetPatients24 runs done-for-you marketing, fast lead follow-up and AI booking for dental, med spa & more.",
+  applicationName: "GetPatients24",
   openGraph: {
     siteName: "GetPatients24",
     type: "website",
+    images: OG_IMAGES,
   },
+  twitter: { card: "summary_large_image" },
+  robots: { index: true, follow: true },
 };
 
 export const viewport = {
