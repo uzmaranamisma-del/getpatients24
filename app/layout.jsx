@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileLayout from "@/components/MobileLayout";
 import { SITE_URL, OG_IMAGES } from "@/lib/site";
 
 export const metadata = {
@@ -44,6 +45,7 @@ export default function RootLayout({ children }) {
           <Header />
           <main id="main">{children}</main>
           <Footer />
+          <MobileLayout />
         </div>
       </body>
     </html>
