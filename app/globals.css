@@ -779,3 +779,10 @@ html body main div[role="group"][aria-label="Plan type"][role][aria-label] > but
   main div:has(> span[aria-hidden][style*="flex:0 0 14px"]) svg,
   main div:has(> span[aria-hidden][style*="flex: 0 0 14px"]) svg { width: 17px; height: 17px; }
 }
+
+@media (max-width: 760px) {
+  /* Page heroes on phones: headline only, no long intro paragraph */
+  main > :first-child p { display: none !important; }
+  main > :first-child h1:is(h1, #_m) { font-size: 28px !important; line-height: 1.15 !important; }
+  main #top h1:is(h1, #_m) { font-size: 30px !important; line-height: 1.12 !important; }
+}
