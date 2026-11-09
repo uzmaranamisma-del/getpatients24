@@ -120,7 +120,7 @@ export default function MainPage() {
       <Link href="/book-demo" style={{ alignSelf: "flex-start", display: "inline-flex", alignItems: "center", gap: "8px", minHeight: "54px", padding: "0 28px", borderRadius: "999px", background: "var(--pri)", color: "#FFFFFF", fontWeight: "700", fontSize: "16px", textDecoration: "none" }}>Book a meeting</Link>
       </div>
       </div>
-      <div style={{ flex: "1.4 1 560px", minWidth: "0", display: "flex", flexDirection: "column", gap: "20px" }}>
+      <div className="step-cards" style={{ flex: "1.4 1 560px", minWidth: "0", display: "flex", flexDirection: "column", gap: "20px" }}>
       <div style={{ borderRadius: "30px", background: "var(--night)", color: "#FFFFFF", padding: "38px", display: "flex", flexDirection: "column", gap: "14px" }}>
       <span style={{ alignSelf: "flex-start", fontSize: "13px", fontWeight: "700", letterSpacing: "0.06em", padding: "7px 14px", borderRadius: "999px", background: "var(--pri)" }}>STEP 01</span>
       <h3 style={{ margin: "0", fontFamily: "'Poppins', sans-serif", fontWeight: "800", fontSize: "clamp(28px, 2.8vw, 40px)", lineHeight: "1.05", letterSpacing: "-0.03em" }}>Reach the right people</h3>

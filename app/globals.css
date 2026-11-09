@@ -976,3 +976,14 @@ html body main div[role="group"][aria-label="Plan type"][role][aria-label] > but
 @media (max-width: 760px) {
   main a[style*="border-radius:999px"], main a[style*="border-radius: 999px"] { white-space: nowrap; }
 }
+
+/* Phone: dark "STEP 0x" cards, smaller type */
+@media (max-width: 760px) {
+  main .step-cards.step-cards > div { padding: 20px 18px !important; gap: 10px !important; border-radius: 22px !important; }
+  main .step-cards.step-cards > div > span:first-child { font-size: 10.5px !important; padding: 5px 11px !important; }
+  main .step-cards.step-cards > div h3 { font-size: 18px !important; line-height: 1.2 !important; letter-spacing: -0.02em !important; }
+  main .step-cards.step-cards > div p { font-size: 13.5px !important; line-height: 1.55 !important; }
+  main .step-cards.step-cards > div ul { font-size: 13.5px !important; gap: 8px !important; }
+  main .step-cards.step-cards > div ul li { gap: 8px !important; line-height: 1.35; }
+  main .step-cards.step-cards > div ul svg { width: 15px; height: 15px; }
+}
