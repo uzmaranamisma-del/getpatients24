@@ -1,9 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import SlotPicker from "@/components/SlotPicker";
+import { CalInline } from "@/components/Cal";
 
 const SOURCE = "book-demo";
+
+function meetingNotes(d) {
+  return [
+    d.clinic && `Clinic: ${d.clinic}`,
+    d.phone && `Phone: ${d.phone}`,
+    d.specialty && `Specialty: ${d.specialty}`,
+    d.locations && `Locations: ${d.locations}`,
+    d.challenge && `Biggest challenge: ${d.challenge}`,
+    d.goal && `Notes: ${d.goal}`,
+  ].filter(Boolean).join("\n");
+}
 
 export default function BookingForm() {
   const [sent, setSent] = useState(false);
@@ -68,8 +79,8 @@ export default function BookingForm() {
       <div role="status" style={{ display: "flex", flexDirection: "column", gap: "18px", padding: "8px 4px" }}>
       <span style={{ width: "72px", height: "72px", borderRadius: "999px", background: "var(--pri)", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 12px 26px rgba(0,119,182,0.3)" }}><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></span>
       <span style={{ fontFamily: "'Poppins', sans-serif", fontWeight: "800", fontSize: "30px", letterSpacing: "-0.02em" }}>Thanks,{" "}{sentName}! Now pick a time.</span>
-      <span style={{ fontSize: "16px", lineHeight: "1.6", color: "var(--muted)" }}>Step 2 of 2. Choose a slot below and we'll confirm it by email.</span>
-      <SlotPicker name={sentName} details={details} /><button type="button" onClick={resetForm} style={{ alignSelf: "flex-start", minHeight: "48px", padding: "0 22px", borderRadius: "999px", border: "1.5px solid var(--line)", background: "#FFFFFF", color: "var(--ink)", fontWeight: "600", fontFamily: "inherit", cursor: "pointer" }}>Edit my details</button>
+      <span style={{ fontSize: "16px", lineHeight: "1.6", color: "var(--muted)" }}>Step 2 of 2. Pick a time below and you'll get a calendar invite by email straight away.</span>
+      <CalInline name={details.name} email={details.email} notes={meetingNotes(details)} /><button type="button" onClick={resetForm} style={{ alignSelf: "flex-start", minHeight: "48px", padding: "0 22px", borderRadius: "999px", border: "1.5px solid var(--line)", background: "#FFFFFF", color: "var(--ink)", fontWeight: "600", fontFamily: "inherit", cursor: "pointer" }}>Edit my details</button>
       </div>
       </>)}
     </>

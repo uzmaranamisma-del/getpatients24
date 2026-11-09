@@ -21,7 +21,6 @@ Copy `.env.example` to `.env.local` (or set the same variables in Vercel):
 | `LEAD_TO_EMAIL` | Where every form submission is emailed (default getpatients24@gmail.com) |
 | `SMTP_USER` / `SMTP_PASS` | Gmail address and its App Password used to send those emails |
 | `LEAD_WEBHOOK_URL` | Optional: also forward each lead as JSON to n8n, Make, Zapier or a CRM |
-| `NEXT_PUBLIC_BOOKING_URL` | Optional cal.com / Calendly link shown under the demo slot picker |
 
 ## Where things live
 
