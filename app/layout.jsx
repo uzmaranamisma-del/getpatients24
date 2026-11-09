@@ -1,7 +1,6 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { MeetingLinks } from "@/components/Cal";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata = {
@@ -42,7 +41,6 @@ export default function RootLayout({ children }) {
           <main id="main">{children}</main>
           <Footer />
         </div>
-        <MeetingLinks />
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { BOOKING_PATH, CAL_LINK, CAL_NAMESPACE, CAL_URL } from "@/lib/site";
+import { CAL_LINK, CAL_NAMESPACE, CAL_URL } from "@/lib/site";
 
 const EMBED_SRC = "https://app.cal.com/embed/embed.js";
 const CAL_CONFIG = { layout: "month_view", useSlotsViewOnSmallScreen: "true" };
@@ -44,37 +44,6 @@ export function getCal() {
   }
   if (w.__gp24Cal.failed) return null;
   return w.Cal.ns[CAL_NAMESPACE];
-}
-
-export function openMeetingPopup() {
-  const cal = getCal();
-  if (!cal) {
-    window.open(CAL_URL, "_blank", "noopener");
-    return;
-  }
-  cal("modal", { calLink: CAL_LINK, config: CAL_CONFIG });
-}
-
-// Mounted once in the layout: every "Book a meeting" link on the site (any link to
-// the booking page) opens the Cal.com calendar in a popup instead of navigating.
-export function MeetingLinks() {
-  useEffect(() => {
-    getCal();
-    function onClick(e) {
-      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-      const a = e.target instanceof Element ? e.target.closest("a[href]") : null;
-      if (!a || a.closest("[data-no-cal]")) return;
-      let url;
-      try { url = new URL(a.getAttribute("href"), window.location.href); } catch { return; }
-      if (url.origin !== window.location.origin || url.pathname !== BOOKING_PATH || url.hash) return;
-      e.preventDefault();
-      openMeetingPopup();
-    }
-    // Capture phase, so this runs before Next.js <Link> navigates.
-    document.addEventListener("click", onClick, true);
-    return () => document.removeEventListener("click", onClick, true);
-  }, []);
-  return null;
 }
 
 // Cal.com calendar shown inline on the booking page, pre-filled with the visitor's answers.
