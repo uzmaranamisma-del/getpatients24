@@ -43,12 +43,31 @@ function PhoneIcon({ size = 20, color = "currentColor" }) {
 export default function Header() {
   const pathname = usePathname() || "/";
   const [open, setOpen] = useState(false);
+  const [sub, setSub] = useState(null); // which drawer dropdown is open
 
+  // Open the dropdown for the section you're in; close the drawer on navigation.
+  const inList = (list) => list.some((i) => i.href === pathname);
   useEffect(() => {
     setOpen(false);
+    setSub(pathname === "/how-we-help" || inList(SPECIALTIES) ? "who" : inList(SERVICES) ? "services" : null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
-  const inList = (list) => list.some((i) => i.href === pathname);
+  // While the drawer is open: lock page scroll, Escape closes it.
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e) => e.key === "Escape" && setOpen(false);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  const toggleSub = (key) => setSub((v) => (v === key ? null : key));
+
   const section = pathname === "/"
     ? "home"
     : pathname === "/how-we-help" || inList(SPECIALTIES)
@@ -123,24 +142,68 @@ export default function Header() {
           </span>
         </div>
 
-        <nav id="mobile-menu" aria-label="Mobile" className={"mobile-menu" + (open ? " open" : "")}>
-          <Link href="/" aria-current={current("/")}>Home</Link>
-          <span className="group">WHO WE HELP</span>
-          <Link href="/how-we-help" className="sub" aria-current={current("/how-we-help")}>All specialties</Link>
-          {SPECIALTIES.map((s) => (
-            <Link key={s.href} href={s.href} className="sub" aria-current={current(s.href)}>{s.label}</Link>
-          ))}
-          <span className="group">SERVICES</span>
-          {SERVICES.map((s) => (
-            <Link key={s.href} href={s.href} className="sub" aria-current={current(s.href)}>{s.label}</Link>
-          ))}
-          <span className="group">COMPANY</span>
-          <Link href="/pricing-plans" aria-current={current("/pricing-plans")}>Pricing</Link>
-          <Link href="/about" aria-current={current("/about")}>About</Link>
-          <a href={PHONE_HREF}>Call {PHONE}</a>
-          <Link href="/book-demo" className="cta-btn menu-cta">Book a meeting</Link>
-        </nav>
       </header>
+
+      {/* Mobile: side drawer. Rendered outside the sticky header so position:fixed covers the screen. */}
+      <div className={"drawer-backdrop" + (open ? " open" : "")} onClick={() => setOpen(false)} aria-hidden="true" />
+      <nav
+        id="mobile-menu"
+        aria-label="Mobile"
+        className={"drawer" + (open ? " open" : "")}
+        aria-hidden={!open}
+        inert={!open}
+      >
+        <div className="drawer-head">
+          <Link href="/" className="brand" aria-label="GetPatients24 home" onClick={() => setOpen(false)}>
+            <Logo size={22} />
+          </Link>
+          <button type="button" className="drawer-close" aria-label="Close menu" onClick={() => setOpen(false)}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div className="drawer-body">
+          <Link href="/" className="drawer-link" aria-current={current("/")}>Home</Link>
+
+          <button type="button" className="drawer-link drawer-toggle" aria-expanded={sub === "who"} aria-controls="drawer-who" onClick={() => toggleSub("who")}>
+            Who We Help
+            <Chevron />
+          </button>
+          <div id="drawer-who" className={"drawer-sub" + (sub === "who" ? " open" : "")}>
+            <div>
+              {SPECIALTIES.map((s) => (
+                <Link key={s.href} href={s.href} aria-current={current(s.href)}>{s.label}</Link>
+              ))}
+              <Link href="/how-we-help" className="all" aria-current={current("/how-we-help")}>All specialties →</Link>
+            </div>
+          </div>
+
+          <button type="button" className="drawer-link drawer-toggle" aria-expanded={sub === "services"} aria-controls="drawer-services" onClick={() => toggleSub("services")}>
+            Services
+            <Chevron />
+          </button>
+          <div id="drawer-services" className={"drawer-sub" + (sub === "services" ? " open" : "")}>
+            <div>
+              {SERVICES.map((s) => (
+                <Link key={s.href} href={s.href} aria-current={current(s.href)}>{s.label}</Link>
+              ))}
+            </div>
+          </div>
+
+          <Link href="/pricing-plans" className="drawer-link" aria-current={current("/pricing-plans")}>Pricing</Link>
+          <Link href="/about" className="drawer-link" aria-current={current("/about")}>About</Link>
+        </div>
+
+        <div className="drawer-foot">
+          <a href={PHONE_HREF} className="drawer-call">
+            <PhoneIcon size={18} />
+            Call {PHONE}
+          </a>
+          <Link href="/book-demo" className="cta-btn drawer-cta">Book a meeting</Link>
+        </div>
+      </nav>
     </>
   );
 }
