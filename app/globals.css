@@ -987,3 +987,24 @@ html body main div[role="group"][aria-label="Plan type"][role][aria-label] > but
   main .step-cards.step-cards > div ul li { gap: 8px !important; line-height: 1.35; }
   main .step-cards.step-cards > div ul svg { width: 15px; height: 15px; }
 }
+
+/* Phone: Offer page */
+@media (max-width: 760px) {
+  main .offer-seal.offer-seal { padding: 28px 20px !important; gap: 22px !important; justify-content: center; text-align: center; border-radius: 26px !important; }
+  main .offer-seal .offer-badge { width: 132px !important; height: 132px !important; margin: 0 auto; }
+  main .offer-seal .offer-badge > span:first-child { font-size: 40px !important; }
+  main .offer-seal .offer-badge > span:last-child { font-size: 10.5px !important; }
+  main .offer-seal h2 { font-size: 23px !important; }
+  main .offer-seal p { font-size: 14.5px !important; }
+  main .offer-stats.offer-stats { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 8px !important; }
+  main .offer-stats.offer-stats > span { padding: 12px 6px !important; text-align: center; }
+  main .offer-stats.offer-stats > span > span:first-child { font-size: 22px !important; }
+  main .offer-stats.offer-stats > span > span:last-child { font-size: 11px !important; line-height: 1.3; }
+  main .offer-list.offer-list { grid-template-columns: 1fr !important; gap: 8px !important; }
+  main .offer-list.offer-list > span { padding: 13px 16px !important; font-size: 14px !important; }
+  main .offer-terms.offer-terms > div { padding: 18px !important; }
+  main .offer-terms.offer-terms h3 { font-size: 16.5px !important; }
+  main .offer-terms.offer-terms p { font-size: 13.5px !important; }
+  main .offer-steps.offer-steps h3 { font-size: 18px !important; }
+  main .offer-steps.offer-steps p { font-size: 14px !important; }
+}
