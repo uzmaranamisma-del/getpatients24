@@ -113,7 +113,6 @@ export default function Header() {
               </div>
             </div>
             <Link href="/pricing-plans" className={navClass("pricing-plans")} aria-current={current("/pricing-plans")}>Pricing</Link>
-            <Link href="/offer" className={navClass("offer")} aria-current={current("/offer")}>Offer</Link>
             <Link href="/about" className={navClass("about")} aria-current={current("/about")}>About</Link>
           </nav>
 
@@ -194,7 +193,6 @@ export default function Header() {
           </div>
 
           <Link href="/pricing-plans" className="drawer-link" aria-current={current("/pricing-plans")}>Pricing</Link>
-          <Link href="/offer" className="drawer-link" aria-current={current("/offer")}>Offer</Link>
           <Link href="/about" className="drawer-link" aria-current={current("/about")}>About</Link>
         </div>
 
