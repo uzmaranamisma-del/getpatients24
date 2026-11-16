@@ -987,3 +987,11 @@ html body main div[role="group"][aria-label="Plan type"][role][aria-label] > but
   main .step-cards.step-cards > div ul li { gap: 8px !important; line-height: 1.35; }
   main .step-cards.step-cards > div ul svg { width: 15px; height: 15px; }
 }
+
+/* Phone: Doctor referral questionnaire */
+@media (max-width: 760px) {
+  main .ref-side.ref-side { position: static !important; max-width: none !important; order: 2; }
+  main .ref-form.ref-form { order: 1; padding: 4px !important; border-radius: 22px !important; margin: 0 -8px; }
+  main .ref-chips.ref-chips > span { padding: 7px 12px !important; font-size: 12.5px !important; }
+  main .ref-chips.ref-chips svg { width: 15px; height: 15px; }
+}

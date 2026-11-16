@@ -5,7 +5,7 @@ const BASE = SITE_URL;
 const ROUTES = [
   "", "/how-we-help", "/done-for-you-patient-acquisition", "/website-ai-booking-system", "/pricing-plans",
   "/about", "/book-demo", "/chiropractic", "/regenerative-clinics", "/physical-therapy-clinics",
-  "/dental-clinics", "/med-spa", "/eye-clinics", "/surgeons", "/privacy-policy", "/terms",
+  "/dental-clinics", "/med-spa", "/eye-clinics", "/surgeons", "/doctor-referral-program", "/privacy-policy", "/terms",
 ];
 
 export default function sitemap() {
